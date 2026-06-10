@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #D8DDE6; /* Explicit light silver requested by user (#D8DDE6) */
+    color: #2D3748;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+  }
+
+  .font-serif {
+    font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Stunning custom keyframe fade-in animation for beauty-reveals */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Premium smooth range sliders & inputs */
+input, select, textarea {
+  outline: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #111827;
+  box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.08);
+}
+
+/* Faux Fur Backdrop-Filter and Pseudo-Element Layering on #gloss-app */
+#gloss-app {
+  position: relative;
+  overflow-x: hidden;
+}
+
+#gloss-app::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  backdrop-filter: blur(5px) contrast(115%) brightness(88%);
+  background-image: 
+    radial-gradient(ellipse at center, rgba(255, 255, 255, 0.06) 0%, transparent 70%),
+    repeating-linear-gradient(72deg, rgba(4, 4, 6, 0.94) 0px, rgba(4, 4, 6, 0.94) 1.5px, transparent 1.5px, transparent 4.5px),
+    repeating-linear-gradient(-72deg, rgba(180, 195, 220, 0.16) 0px, rgba(180, 195, 220, 0.16) 1px, transparent 1px, transparent 4.0px),
+    repeating-linear-gradient(118deg, rgba(6, 6, 8, 0.96) 0px, rgba(6, 6, 8, 0.96) 2px, transparent 2px, transparent 6.5px),
+    repeating-linear-gradient(-118deg, rgba(150, 165, 185, 0.14) 0px, rgba(150, 165, 185, 0.14) 1.2px, transparent 1.2px, transparent 5.5px);
+  mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' result='noise'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.88 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' result='noise'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.88 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.42;
+  mix-blend-mode: overlay;
+}
+
