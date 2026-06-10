@@ -1,0 +1,6 @@
+{
+  "name": "GLOSS Paris App",
+  "description": "Kişiselleştirilmiş lüks makyaj rehberi, stil koleksiyonları ve ürün kullanım rehberi sitesi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
